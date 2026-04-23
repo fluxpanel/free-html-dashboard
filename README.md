@@ -6,7 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/fluxapanel/free-html-dashboard)](https://github.com/fluxapanel/free-html-dashboard/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/fluxapanel/free-html-dashboard)](https://github.com/fluxapanel/free-html-dashboard/network)
 [![GitHub issues](https://img.shields.io/github/issues/fluxapanel/free-html-dashboard)](https://github.com/fluxapanel/free-html-dashboard/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://fluxapanel.com)
 
 **Fluxa** is a premium, high-performance admin dashboard template designed with a focus on fluidity, modern aesthetics, and exceptional user experience. Built with pure HTML, Vanilla CSS, and JavaScript, it offers a lightweight yet powerful foundation for any data-driven application.
 
