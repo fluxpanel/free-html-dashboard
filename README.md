@@ -26,10 +26,10 @@ To get started with Fluxa, simply clone the repository and open the `index.html`
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/fluxa.git
+git clone https://github.com/fluxapanel/free-html-dashboard.git
 
 # Navigate to the dashboard directory
-cd fluxa/html
+cd free-html-dashboard
 
 # Open index.html in your browser
 open index.html
@@ -38,7 +38,7 @@ open index.html
 ## 📂 Project Structure
 
 ```text
-html/
+free-html-dashboard/
 ├── index.html          # Redirect to Analytics
 ├── dashboard/
 │   ├── analytics.html  # Analytics Dashboard

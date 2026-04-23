@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxa | Stocks Dashboard</title>
+    <meta name="description" content="Fluxa - Stocks & Portfolio Dashboard variant.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="../assets/img/logo.png" alt="Fluxa Logo" style="width: 32px; height: 32px; border-radius: 8px;">
+                    <span class="logo-text">Fluxa</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <p class="menu-label">Main Menu</p>
+                <ul class="menu-list">
+                    <li class="menu-item has-submenu open">
+                        <a class="menu-link">
+                            <i data-lucide="layout-dashboard"></i>
+                            <span>Dashboard</span>
+                            <i data-lucide="chevron-down" class="arrow"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="analytics.html" class="submenu-link">Analytics</a></li>
+                            <li><a href="ecommerce.html" class="submenu-link">Ecommerce</a></li>
+                            <li><a href="crm.html" class="submenu-link">CRM</a></li>
+                            <li><a href="finance.html" class="submenu-link">Finance</a></li>
+                            <li><a href="projects.html" class="submenu-link">Project</a></li>
+                            <li><a href="marketing.html" class="submenu-link">Marketing</a></li>
+                            <li><a href="stocks.html" class="submenu-link active">Stocks</a></li>
+                            <li><a href="logistics.html" class="submenu-link">Logistics <span class="nav-badge">New</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="analytics.html" class="menu-link">
+                            <i data-lucide="bar-chart-2"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="menu-label">Apps</p>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="ecommerce.html" class="menu-link">
+                            <i data-lucide="shopping-bag"></i>
+                            <span>Ecommerce</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i data-lucide="mail"></i>
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i data-lucide="message-square"></i>
+                            <span>Chat</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div style="padding: 1rem; border-top: 1px solid var(--border-color);">
+                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 1rem; border-radius: 12px; color: white;">
+                    <p style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem;">Upgrade to Pro</p>
+                    <button style="width: 100%; padding: 0.5rem; border: none; border-radius: 8px; background: white; color: var(--primary); font-weight: 700; font-size: 0.75rem; cursor: pointer;">Upgrade Now</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="header-icon-btn" id="sidebar-toggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search symbols, indices, news...">
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <button class="header-icon-btn" id="theme-toggle">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                    <button class="header-icon-btn">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Fluxa+User&background=6366f1&color=fff" alt="User Avatar" class="user-avatar">
+                        <div class="user-info">
+                            <p class="name">Garegin H.</p>
+                            <p class="role">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-page">
+                <div class="page-header">
+                    <h1>Stocks Dashboard</h1>
+                    <p>Manage your investments and track market trends in real-time.</p>
+                </div>
+
+                <!-- Stocks Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon primary"><i data-lucide="wallet"></i></div>
+                            <div class="stat-trend up"><i data-lucide="trending-up"></i><span>5.4%</span></div>
+                        </div>
+                        <p class="stat-value">$1,245,800</p>
+                        <p class="stat-label">Portfolio Value</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon success"><i data-lucide="arrow-up-right"></i></div>
+                            <div class="stat-trend up"><i data-lucide="trending-up"></i><span>1.2%</span></div>
+                        </div>
+                        <p class="stat-value">+$12,450</p>
+                        <p class="stat-label">Daily Gain</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon secondary"><i data-lucide="zap"></i></div>
+                            <div class="stat-trend up"><i data-lucide="trending-up"></i><span>4.2%</span></div>
+                        </div>
+                        <p class="stat-value">NVDA</p>
+                        <p class="stat-label">Top Gainer</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon warning"><i data-lucide="trending-down"></i></div>
+                            <div class="stat-trend down"><i data-lucide="trending-down"></i><span>1.5%</span></div>
+                        </div>
+                        <p class="stat-value">AAPL</p>
+                        <p class="stat-label">Top Loser</p>
+                    </div>
+                </div>
+
+                <!-- Stocks Charts -->
+                <div class="charts-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Portfolio Performance</h2>
+                        </div>
+                        <div style="height: 350px;">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Asset Allocation</h2>
+                        </div>
+                        <div style="height: 350px; display: flex; align-items: center; justify-content: center;">
+                            <canvas id="allocationChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Positions Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Active Positions</h2>
+                        <button class="header-icon-btn">Trade Now</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Price</th>
+                                    <th>Holdings</th>
+                                    <th>Total Value</th>
+                                    <th>Profit/Loss</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary); font-size: 0.75rem;">N</div>
+                                            <div style="display: flex; flex-direction: column;">
+                                                <span style="font-weight: 600;">NVDA</span>
+                                                <span style="font-size: 0.7rem; color: var(--text-muted);">NVIDIA Corp.</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$875.40</td>
+                                    <td>100 Shares</td>
+                                    <td>$87,540</td>
+                                    <td><span style="color: var(--success); font-weight: 600;">+$22,450 (34.2%)</span></td>
+                                    <td><span class="badge badge-success">Strong Buy</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--secondary); font-size: 0.75rem;">T</div>
+                                            <div style="display: flex; flex-direction: column;">
+                                                <span style="font-weight: 600;">TSLA</span>
+                                                <span style="font-size: 0.7rem; color: var(--text-muted);">Tesla, Inc.</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$175.20</td>
+                                    <td>50 Shares</td>
+                                    <td>$8,760</td>
+                                    <td><span style="color: var(--danger); font-weight: 600;">-$420 (4.5%)</span></td>
+                                    <td><span class="badge badge-warning">Hold</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 0.75rem;">M</div>
+                                            <div style="display: flex; flex-direction: column;">
+                                                <span style="font-weight: 600;">MSFT</span>
+                                                <span style="font-size: 0.7rem; color: var(--text-muted);">Microsoft</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$425.10</td>
+                                    <td>150 Shares</td>
+                                    <td>$63,765</td>
+                                    <td><span style="color: var(--success); font-weight: 600;">+$8,120 (14.6%)</span></td>
+                                    <td><span class="badge badge-primary">Buy</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #f59e0b; font-size: 0.75rem;">B</div>
+                                            <div style="display: flex; flex-direction: column;">
+                                                <span style="font-weight: 600;">BTC</span>
+                                                <span style="font-size: 0.7rem; color: var(--text-muted);">Bitcoin</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$64,250</td>
+                                    <td>0.5 BTC</td>
+                                    <td>$32,125</td>
+                                    <td><span style="color: var(--success); font-weight: 600;">+$18,400 (134%)</span></td>
+                                    <td><span class="badge badge-success">Hold</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Performance Chart
+        const perfCtx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(perfCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Portfolio Value',
+                    data: [850000, 920000, 880000, 1050000, 1180000, 1245800],
+                    borderColor: '#6366f1',
+                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // Allocation Chart
+        const allocCtx = document.getElementById('allocationChart').getContext('2d');
+        new Chart(allocCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Tech', 'Crypto', 'Energy', 'Healthcare', 'Cash'],
+                datasets: [{
+                    data: [45, 20, 15, 10, 10],
+                    backgroundColor: ['#6366f1', '#f59e0b', '#10b981', '#ec4899', '#94a3b8'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
