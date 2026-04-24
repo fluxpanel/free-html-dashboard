@@ -1,6 +1,6 @@
-# Fluxa Admin Panel
+# Flux Admin Panel
 
-![Fluxa Logo](assets/img/cover.png)
+![Flux Logo](assets/img/cover.png)
 
 [![GitHub license](https://img.shields.io/github/license/fluxpanel/free-html-dashboard)](https://github.com/fluxpanel/free-html-dashboard/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/fluxpanel/free-html-dashboard)](https://github.com/fluxpanel/free-html-dashboard/stargazers)
@@ -8,7 +8,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/fluxpanel/free-html-dashboard)](https://github.com/fluxpanel/free-html-dashboard/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://fluxpanel.com)
 
-**Fluxa** is a premium, high-performance admin dashboard template designed with a focus on fluidity, modern aesthetics, and exceptional user experience. Built with pure HTML, Vanilla CSS, and JavaScript, it offers a lightweight yet powerful foundation for any data-driven application.
+**Flux** is a premium, high-performance admin dashboard template designed with a focus on fluidity, modern aesthetics, and exceptional user experience. Built with pure HTML, Vanilla CSS, and JavaScript, it offers a lightweight yet powerful foundation for any data-driven application.
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## 🚀 Quick Start
 
-To get started with Fluxa, simply clone the repository and open the `index.html` file in your preferred browser.
+To get started with Flux, simply clone the repository and open the `index.html` file in your preferred browser.
 
 ```bash
 # Clone the repository
@@ -62,7 +62,7 @@ free-html-dashboard/
 │   ├── js/
 │   │   └── main.js     # Interactivity & Charts
 │   └── img/
-│       └── logo.png    # Fluxa Branding
+│       └── logo.png    # Flux Branding
 ├── README.md           # Project Documentation
 └── .gitignore          # Git ignore rules
 ```
@@ -81,4 +81,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Created with ❤️ by **Fluxa Team**
+Created with ❤️ by **Flux Team**

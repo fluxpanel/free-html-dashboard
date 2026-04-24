@@ -1,5 +1,5 @@
 /**
- * Fluxa Admin Panel - Main JavaScript
+ * Flux Admin Panel - Main JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
